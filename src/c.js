@@ -1,5 +1,7 @@
 import program from 'commander'
 
+import { helper } from './helper'
+
 program
   .option('-d, --debug', 'output extra debugging')
   .option('-s, --small', 'small pizza size')
@@ -10,7 +12,7 @@ program.parse(process.argv)
 if (program.debug) {
   console.log(program.opts())
 }
-console.log('pizza details:')
+console.log('pizza details:', helper())
 
 if (program.small) {
   console.log('- small pizza size')

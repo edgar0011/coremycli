@@ -1,1 +1,3 @@
-console.log('Hello')
+import { helper } from './helper'
+
+console.log('Hello', helper())
